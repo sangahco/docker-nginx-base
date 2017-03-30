@@ -6,10 +6,10 @@ error_log  /var/log/nginx/error.log warn;
 pid        /var/run/nginx.pid;
 
 events {
-    worker_connections  9000;
+    worker_connections  19000;
 }
 
-worker_rlimit_nofile 10000;
+worker_rlimit_nofile 20000;
 
 http {
     resolver $NAMESERVERS valid=30s;
