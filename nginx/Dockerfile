@@ -3,6 +3,7 @@ MAINTAINER Emanuele Disco <emanuele.disco@gmail.com>
 
 COPY ./conf.d/ /etc/nginx/conf.d/
 COPY ./nginx.conf.template /etc/nginx/
+COPY ./ssl/ /etc/nginx/ssl/
 
 RUN mkdir -p /usr/share/nginx/stream
 RUN mkdir -p /usr/share/nginx/conf.d
