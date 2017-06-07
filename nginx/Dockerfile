@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:1.12-alpine
 MAINTAINER Emanuele Disco <emanuele.disco@gmail.com>
 
 COPY ./conf.d/ /etc/nginx/conf.d/
