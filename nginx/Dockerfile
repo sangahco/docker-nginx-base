@@ -1,5 +1,5 @@
 FROM nginx:1.18.0-alpine
-MAINTAINER Emanuele Disco <emanuele.disco@gmail.com>
+LABEL maintainer="Emanuele Disco <emanuele.disco@gmail.com>"
 
 COPY ./conf.d/ /etc/nginx/conf.d/
 COPY ./nginx.template.conf /etc/nginx/
@@ -12,6 +12,9 @@ ONBUILD COPY ./stream /usr/share/nginx/stream/
 
 EXPOSE 80
 EXPOSE 443
+
+RUN rm /var/log/nginx/access.log
+VOLUME [ "/var/log/nginx" ]
 
 COPY ./docker-entrypoint.sh ./entrypoint.sh
 RUN chmod +x /entrypoint.sh
