@@ -1,4 +1,4 @@
-FROM nginx:1.18.0-alpine
+FROM nginx:1.31-alpine
 LABEL maintainer="Emanuele Disco <emanuele.disco@gmail.com>"
 
 COPY ./conf.d/ /etc/nginx/conf.d/
