@@ -1,4 +1,4 @@
-FROM nginx:1.31-alpine
+FROM nginx:1.24-bullseye
 LABEL maintainer="Emanuele Disco <emanuele.disco@gmail.com>"
 
 COPY ./conf.d/ /etc/nginx/conf.d/
